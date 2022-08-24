@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-world-pod
-        image: shreyadey16/testdockerrepo:latest01
+        image: shreyadey16/testdockerrepo:latest
         ports: 
         - containerPort: 80
         - containerPort: 443
