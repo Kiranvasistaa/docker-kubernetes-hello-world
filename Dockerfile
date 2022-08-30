@@ -1,7 +1,6 @@
-
-FROM openjdk:11-slim
+FROM openjdk:8-jdk-alpine
+ENV PORT 8080
 EXPOSE 8080
-RUN mkdir /app
-WORKDIR /app
-COPY target/*.jar app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+COPY target/*.jar /opt/app.jar
+WORKDIR /opt
+CMD ["java", "-jar", "app.jar"]
